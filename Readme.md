@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Злата Филоненко](https://up.htmlacademy.ru/adaptive/14/user/497629).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктория Коваленко](https://up.htmlacademy.ru/adaptive/14/user/42638).
 
 ---
 
