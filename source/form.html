@@ -33,15 +33,16 @@
             <h1 class="page-main__title title-1">Подбор программы</h1>
             
             <section class="main-modal">
+                <h2 class="visually-hidden">Форма подбора программы</h2>
                 <p class="main-modal__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
                 <form class="modal" method="post" action="https://echo.htmlacademy.ru">
                     <fieldset class="modal__set set">
                         <legend class="visually-hidden">Основная информация</legend>
-                        <label class="set__label label" for="name">Имя:*</label>
+                        <label class="set__label label" for="modal-name">Имя:*</label>
                         <input type="text" id="modal-name" name="name" placeholder="Барсик"> 
-                        <label class="set__label label" for="weight">Вес (кг):*</label>
+                        <label class="set__label label" for="modal-weight">Вес (кг):*</label>
                         <input type="number" id="modal-weight" name="weight" value="7"> 
-                        <label class="set__label label" for="age">Возраст (лет):*</label>
+                        <label class="set__label label" for="modal-age">Возраст (лет):*</label>
                         <input type="number" id="modal-age" name="age" value="7"> 
                     </fieldset>
                     <fieldset class="modal__set set">
@@ -61,14 +62,14 @@
                     </fieldset>
                     <fieldset class="modal__set set">
                         <legend class="set__legend legend">Контактные данные (владельца кота)</legend>
-                        <label class="set__label label" for="email">E-mail:*</label>
+                        <label class="set__label label" for="modal-email">E-mail:*</label>
                         <input type="email" id="modal-email" name="email" placeholder="kuklachev@gmail.com">
-                        <label class="set__label label" for="phone">Телефон:*</label>
+                        <label class="set__label label" for="modal-phone">Телефон:*</label>
                         <input type="number" id="modal-phone" name="phone" value="89609006090">
                     </fieldset>
                     <fieldset class="modal__set set">
                         <legend class="set__legend legend">Комментарий</legend>
-                        <label class="visually-hidden" for="comment">Комментарий:</label>
+                        <label class="visually-hidden" for="modal-comment">Комментарий:</label>
                         <textarea id="modal-comment" name="comment" rows="8" cols="30">Расскажите обо всех повадках кота</textarea>
                     </fieldset>
                     <fieldset class="modal__set set">
