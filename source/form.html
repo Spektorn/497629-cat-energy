@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Academy: Кэт энерджи</title>
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="page-header__logo-container logo-container">
+                <a class="logo-container__logo logo" href="index.html">
+                    <img class="logo-container__logo-image logo-image" src="http://placehold.it/191x44" width="191" height="44" alt="Cat Energy">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="main-nav__nav-btn" type="button">Меню</button>
+                <ul class="main-nav__nav-list nav-list">
+                    <li class="nav-list__item nav-list__item--active">
+                        <a class="nav-list__link link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a class="nav-list__link link" href="catalog.html">Каталог продукции</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a class="nav-list__link link" href="form.html">Подбор программы</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="page-main">
+            <h1 class="page-main__title main-title">Подбор программы</h1>
+            <section class="main-modal">
+                <h2 class="visually-hidden">Форма подбора программы</h2>
+                <p class="main-modal__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+                <form class="modal" method="post" action="https://echo.htmlacademy.ru">
+                    <fieldset class="modal__set set">
+                        <legend class="visually-hidden">Основная информация</legend>
+                        <label class="set__label label" for="modal-name">Имя:*</label>
+                        <input type="text" id="modal-name" name="name" placeholder="Барсик">
+                        <label class="set__label label" for="modal-weight">Вес (кг):*</label>
+                        <input type="number" id="modal-weight" name="weight" value="7">
+                        <label class="set__label label" for="modal-age">Возраст (лет):*</label>
+                        <input type="number" id="modal-age" name="age" value="7">
+                    </fieldset>
+                    <fieldset class="modal__set set">
+                        <legend class="visually-hidden">Тип программы</legend>
+                        <label class="set__label label">
+                            <input type="radio" name="program" value="1" checked>
+                            Похудение
+                        </label>
+                        <label class="set__label label">
+                            <input type="radio" name="program" value="2">
+                            Набор массы
+                        </label>
+                        <label class="set__label label">
+                            <input type="radio" name="program" value="3">
+                            Не знаю (нужен ваш совет)
+                        </label>
+                    </fieldset>
+                    <fieldset class="modal__set set">
+                        <legend class="set__legend legend">Контактные данные (владельца кота)</legend>
+                        <label class="set__label label" for="modal-email">E-mail:*</label>
+                        <input type="email" id="modal-email" name="email" placeholder="kuklachev@gmail.com">
+                        <label class="set__label label" for="modal-phone">Телефон:*</label>
+                        <input type="number" id="modal-phone" name="phone" value="89609006090">
+                    </fieldset>
+                    <fieldset class="modal__set set">
+                        <legend class="set__legend legend">Комментарий</legend>
+                        <label class="visually-hidden" for="modal-comment">Комментарий:</label>
+                        <textarea id="modal-comment" name="comment" rows="8" cols="30">Расскажите обо всех повадках кота</textarea>
+                    </fieldset>
+                    <fieldset class="modal__set set">
+                        <legend class="set__legend legend">Дополнительно</legend>
+                        <label class="set__label label">
+                            <input type="checkbox" name="sugar-replace" checked>
+                            Сахарозаменитель
+                        </label>
+                        <label class="set__label label">
+                            <input type="checkbox" name="water">
+                            Питьевая вода
+                        </label>
+                        <label class="set__label label">
+                            <input type="checkbox" name="milk">
+                            Молоко
+                        </label>
+                        <label class="set__label label">
+                            <input type="checkbox" name="vitamins">
+                            Витамины
+                        </label>
+                    </fieldset>
+                    <button class="modal__btn btn" type="submit">Отправить заявку</button>
+                    <b class="modal__reminder">* - Обязательные поля</b>
+                </form>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <section class="page-footer__main-map main-map">
+                <h2 class="visually-hidden">Наш адрес</h2>
+                <p class="main-map__invite">Приглашаем к сотрудничеству дилеров!</p>
+                <p class="main-map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+                <img class="main-map__map" src="http://placehold.it/320x360" alt="Карта">
+            </section>
+            <section class="page-footer__social social">
+                <h2 class="visually-hidden">Мы в социальных сетях</h2>
+                <div class="social__logo-container logo-container">
+                    <a class="social__logo logo" href="index.html">
+                        <img class="social__logo-image logo-image" src="http://placehold.it/132x26" width="132" height="26" alt="Cat Energy">
+                    </a>
+                </div>
+                <ul class="social__social-list">
+                    <li class="social__item">
+                        <a class="social__link social__link--vk link" href="#">Вконтакте</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--inst link" href="#">Инстаграм</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--fb link" href="#">Фейсбук</a>
+                    </li>
+                </ul>
+                <div class="footer__copyright copyright">
+                    <a class="copyright__html link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                    <a class="copyright__html-logo link" href="https://htmlacademy.ru/intensive/adaptive">
+                        <img class="copyright__html-logo-image html-logo-image" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
+                    </a>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>
