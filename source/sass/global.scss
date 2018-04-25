@@ -8,12 +8,14 @@ body {
     line-height: $line-main;
     color: $font-base-color;
 }
+
 .section-title {
     font-weight: normal;
     font-size: $font-title;
     line-height: $line-title;
     color: $font-opt-color;
 }
+
 .feature-title,
 .product-title {
     font-weight: normal;
@@ -21,9 +23,11 @@ body {
     line-height: $line-sec-title;
     color: $font-opt-color;
 }
+
 .link {
     text-decoration: none;
 }
+
 .btn {
     display: block;
     background-color: $opt-color-gn;
