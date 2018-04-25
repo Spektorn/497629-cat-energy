@@ -10,11 +10,9 @@
 .cards-list__link  {
     text-transform: uppercase;
     color: $font-opt-color;
-    
     &:hover,
     &:focus  {
     }
-    
     &:active  {
         color: transparentize($font-opt-color, 0.7);
     }
