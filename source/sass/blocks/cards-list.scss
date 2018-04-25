@@ -1,19 +1,19 @@
-.cards-list  {
+.cards-list {
     list-style: none;
     background-color: $opt-color-gy;
 }
 
-.cards-list__title  {
+.cards-list__title {
     text-transform: uppercase;
 }
 
-.cards-list__link  {
+.cards-list__link {
     text-transform: uppercase;
     color: $font-opt-color;
     &:hover,
-    &:focus  {
+    &:focus {
     }
-    &:active  {
+    &:active {
         color: transparentize($font-opt-color, 0.7);
     }
 }

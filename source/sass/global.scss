@@ -1,39 +1,39 @@
 body {
-    width: 320px;
-    margin: 0 auto;
-    background-color: $base-color;
-    font-family: "Oswald", "Arial", sans-serif;
-    font-weight: normal;
-    font-size: $font-main;
-    line-height: $line-main;
-    color: $font-base-color;
+  width: 320px;
+  margin: 0 auto;
+  background-color: $base-color;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: $font-main;
+  line-height: $line-main;
+  color: $font-base-color;
 }
 
 .section-title {
-    font-weight: normal;
-    font-size: $font-title;
-    line-height: $line-title;
-    color: $font-opt-color;
+  font-weight: normal;
+  font-size: $font-title;
+  line-height: $line-title;
+  color: $font-opt-color;
 }
 
 .feature-title,
 .product-title {
-    font-weight: normal;
-    font-size: $font-sec-title;
-    line-height: $line-sec-title;
-    color: $font-opt-color;
+  font-weight: normal;
+  font-size: $font-sec-title;
+  line-height: $line-sec-title;
+  color: $font-opt-color;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .btn {
-    display: block;
-    background-color: $opt-color-gn;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $base-color;
+  display: block;
+  background-color: $opt-color-gn;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $base-color;
     &:hover,
     &:focus {
         background-color: $opt-color-gn - 10 -13 -9;
