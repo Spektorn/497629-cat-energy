@@ -1,0 +1,17 @@
+.cards-list {
+    list-style: none;
+    background-color: $opt-color-gy;
+}
+.cards-list__title {
+    text-transform: uppercase;
+}
+.cards-list__link {
+    text-transform: uppercase;
+    color: $font-opt-color;
+    &:hover,
+    &:focus {
+    }
+    &:active {
+        color: transparentize($font-opt-color, 0.7);
+    }
+}
