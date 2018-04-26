@@ -1,1 +1,14 @@
-/*Временно*/
+.special-offer {
+  width: 280px;
+  min-height: 290px;
+  margin: 0 auto;
+  background-color: $opt-color-gn;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.special-offer__description {
+  font-size: $f-sec;
+  line-height: $l-sec;
+  color: $base-color;
+}

@@ -31,9 +31,11 @@ body {
 
 .btn {
   display: block;
+  font-size: $f-sec;
+  line-height: $l-sec;
+  color: $base-color;
   text-decoration: none;
   text-transform: uppercase;
-  color: $base-color;
   background-color: $opt-color-gn;
 
   &:hover,

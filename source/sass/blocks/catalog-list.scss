@@ -1,3 +1,13 @@
 .catalog-list {
   list-style: none;
 }
+
+.catalog-list__title {
+  font-size: $f-sec;
+  line-height: $l-sec;
+}
+
+.catalog-list__info {
+  font-size: $f-description;
+  line-height: $l-description + 4;
+}
