@@ -1,0 +1,49 @@
+body {
+  width: 320px;
+  margin: 0 auto;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $f-main;
+  line-height: $l-main;
+  font-weight: 400;
+  color: $f-base-color;
+  background-color: $base-color;
+}
+
+.section-title {
+  font-size: $f-title;
+  line-height: $l-title;
+  font-weight: 400;
+  color: $f-opt-color;
+}
+
+.feature-title,
+.product-title {
+  font-size: $f-sec-title;
+  line-height: $l-sec-title;
+  font-weight: 400;
+  color: $f-opt-color;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  font-size: $f-sec;
+  line-height: $l-sec;
+  color: $base-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $opt-color-gn;
+
+  &:hover,
+  &:focus {
+    background-color: $opt-color-gn - 10 -13 -9;
+  }
+
+  &:active {
+    color: transparentize($base-color, 0.7);
+  }
+}

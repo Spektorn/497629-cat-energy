@@ -1,0 +1,18 @@
+.nav-list {
+  backgorund-color: $base-color;
+  list-style: none;
+}
+
+.nav-list__link {
+  color: $f-opt-color;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: transparentize($f-opt-color, 0.4);
+  }
+
+  &:active {
+    color: transparentize($f-opt-color, 0.7);
+  }
+}

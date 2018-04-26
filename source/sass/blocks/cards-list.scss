@@ -1,0 +1,18 @@
+.cards-list {
+  background-color: $opt-color-gy;
+  list-style: none;
+}
+
+.cards-list__title {
+  text-transform: uppercase;
+}
+
+.cards-list__link {
+  font-size: $f-sec;
+  color: $f-opt-color;
+  text-transform: uppercase;
+
+  &:active {
+    color: transparentize($f-opt-color, 0.7);
+  }
+}

@@ -1,0 +1,15 @@
+.intro {
+  background-color: $base-color;
+  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.intro__slogan {
+  color: $base-color;
+  text-transform: uppercase;
+}
+
+.intro__title {
+  line-height: 44px;
+  color: $base-color;
+}
