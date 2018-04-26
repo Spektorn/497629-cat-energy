@@ -11,10 +11,12 @@
 .show-more__btn {
   background-color: $opt-color-gy;
   color: $font-base-color;
+  
   &:hover,
   &:focus {
     background-color: $opt-color-gy - 7;
   }
+  
   &:active {
     color: transparentize($font-base-color, 0.7);
   }
