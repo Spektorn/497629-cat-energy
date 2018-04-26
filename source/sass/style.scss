@@ -24,4 +24,10 @@
 @import "blocks/main-map.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,500&subset=cyrillic");
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff") format("woff"),
+    url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff"),
+    url("../fonts/oswaldmedium.woff2") format("woff2")
+}

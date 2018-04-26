@@ -1,19 +1,19 @@
 .set__legend {
-  font-size: $font-sec-title;
-  line-height: $font-sec-title;
+  font-size: $f-sec-title;
+  line-height: $l-sec-title - 12;
 }
 
 .set__label {
-  font-size: $font-sec-main;
-  line-height: $line-main;
+  font-size: $f-sec;
+  line-height: $l-main;
+  color: $f-modal-color;
   text-transform: uppercase;
-  color: $font-form-color;
 }
 
 .set__input {
   font-family: inherit;
-  font-size: $font-sec-main;
-  line-height: $line-main;
+  font-size: $f-sec;
+  line-height: $l-main;
+  color: $f-base-color;
   text-transform: uppercase;
-  color: $font-base-color;
 }

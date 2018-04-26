@@ -1,6 +1,6 @@
 .cards-list {
-  list-style: none;
   background-color: $opt-color-gy;
+  list-style: none;
 }
 
 .cards-list__title {
@@ -8,10 +8,10 @@
 }
 
 .cards-list__link {
+  color: $f-opt-color;
   text-transform: uppercase;
-  color: $font-opt-color;
 
   &:active {
-    color: transparentize($font-opt-color, 0.7);
+    color: transparentize($f-opt-color, 0.7);
   }
 }
