@@ -34,12 +34,12 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: $base-color;
-  
+
   &:hover,
   &:focus {
     background-color: $opt-color-gn - 10 -13 -9;
   }
-  
+
   &:active {
     color: transparentize($base-color, 0.7);
   }
