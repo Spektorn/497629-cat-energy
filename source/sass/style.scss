@@ -1,5 +1,6 @@
 @import "variable.scss";
 @import "mixins.scss";
+@import "font.scss";
 @import "global.scss";
 @import "blocks/page-header.scss";
 @import "blocks/logo-container.scss";
@@ -24,11 +25,3 @@
 @import "blocks/main-map.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
-
-@font-face {
-  font-family: "Oswald";
-  src: url("../fonts/oswaldregular.woff") format("woff"),
-    url("../fonts/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswaldmedium.woff") format("woff"),
-    url("../fonts/oswaldmedium.woff2") format("woff2");
-}
