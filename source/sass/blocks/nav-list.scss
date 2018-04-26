@@ -1,16 +1,16 @@
 .nav-list {
-    list-style: none;
-    backgorund-color: $base-color;
+  list-style: none;
+  backgorund-color: $base-color;
 }
 
 .nav-list__link {
-    text-transform: uppercase;
-    color: $font-opt-color;
-    &:hover,
-    &:focus {
-        color: transparentize($font-opt-color, 0.4);
-    }
-    &:active {
-        color: transparentize($font-opt-color, 0.7);
-    }
+  text-transform: uppercase;
+  color: $font-opt-color;
+  &:hover,
+  &:focus {
+    color: transparentize($font-opt-color, 0.4);
+  }
+  &:active {
+    color: transparentize($font-opt-color, 0.7);
+  }
 }

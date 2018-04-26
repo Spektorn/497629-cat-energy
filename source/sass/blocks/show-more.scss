@@ -1,21 +1,21 @@
 .show-more__title {
-    font-size: $font-sec-main;
-    line-height: $line-sec-main;
-    text-transform: uppercase;
+  font-size: $font-sec-main;
+  line-height: $line-sec-main;
+  text-transform: uppercase;
 }
 
 .show-more__description {
-    font-size: $font-description;
+  font-size: $font-description;
 }
 
 .show-more__btn {
-    background-color: $opt-color-gy;
-    color: $font-base-color;
-    &:hover,
-    &:focus {
-        background-color: $opt-color-gy - 7;
-    }
-    &:active {
-        color: transparentize($font-base-color, 0.7);
-    }
+  background-color: $opt-color-gy;
+  color: $font-base-color;
+  &:hover,
+  &:focus {
+    background-color: $opt-color-gy - 7;
+  }
+  &:active {
+    color: transparentize($font-base-color, 0.7);
+  }
 }
