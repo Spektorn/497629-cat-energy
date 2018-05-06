@@ -6,3 +6,22 @@
   font-family: inherit;
   border: none;
 }
+
+@media (min-width: $desktop-width) {
+
+  .modal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .set {
+    width: 100%;
+
+    &--main-info,
+    &--radio {
+      width: 570px;
+    }
+  }
+}

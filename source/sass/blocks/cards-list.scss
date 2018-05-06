@@ -1,6 +1,6 @@
 .cards-list {
   background-color: $opt-color-gy;
-  list-style: none;
+  @include reset-list;
 }
 
 .cards-list__title {
