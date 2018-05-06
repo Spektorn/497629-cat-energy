@@ -1,1 +1,13 @@
-/*Временно*/
+@media (min-width: $tablet-width) {
+  .logo-container__logo-image {
+    width: 175px;
+    height: 58px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo-container__logo-image {
+    width: 208px;
+    height: 60px;
+  }
+}

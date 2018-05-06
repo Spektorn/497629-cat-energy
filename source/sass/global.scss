@@ -17,7 +17,7 @@ body {
   line-height: $l-main;
   font-weight: 400;
   color: $f-base-color;
-  background-color: $base-color;
+  background-color: lightblue;
 }
 
 .wrapper {
@@ -39,7 +39,7 @@ body {
   }
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;

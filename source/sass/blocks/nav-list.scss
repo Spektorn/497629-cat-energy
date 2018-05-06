@@ -5,6 +5,13 @@
 
 .nav-list__item {
   @include reset;
+  padding: 22px 20px;
+  text-align: center;
+  border-bottom: 1px solid $border-color;
+
+  &--last-item {
+    border-bottom: none;
+  }
 }
 
 .nav-list__link {
@@ -18,5 +25,17 @@
 
   &:active {
     color: transparentize($f-opt-color, 0.7);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav-list__item {
+    padding: 12px 0;
+    padding-top: 20px;
+    border-bottom: none;
+
+    &--active {
+      border-bottom: 2px solid $opt-color-gn;
+    }
   }
 }

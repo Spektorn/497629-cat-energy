@@ -9,13 +9,55 @@
 .main-nav__nav-btn {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 64px;
+  height: 63px;
+  padding: 0;
+  background-color: $base-color;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+  }
 }
 
-.main-nav__nav-list {
-  height: 200px;
+.main-nav--opened .main-nav__nav-btn::before,
+.main-nav--opened .main-nav__nav-btn::after {
+  top: 28px;
+  left: 20px;
+}
 
-  @include outline-b;
+.main-nav--opened .main-nav__nav-btn::before {
+  transform: rotate(45deg);
+}
+
+.main-nav--opened .main-nav__nav-btn::after {
+  transform: rotate(-45deg);
+}
+
+.main-nav--closed .main-nav__nav-btn::before {
+  top: 21px;
+  left: 20px;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--closed .main-nav__nav-btn::after {
+  @include visually-hide;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__nav-list {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -27,14 +69,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 445px;
-    height: 85px;
+    min-width: 440px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav__nav-list {
-    width: 485px;
-    height: 120px;
+    min-width: 480px;
   }
 }
