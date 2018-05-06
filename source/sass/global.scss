@@ -1,5 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  width: 320px;
+  width: auto;
   margin: 0 auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -10,7 +20,41 @@ body {
   background-color: $base-color;
 }
 
+.wrapper {
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .wrapper {
+    width: 710px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .wrapper {
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .section-title {
+  margin: 0;
+  padding: 0;
   font-size: $f-title;
   line-height: $l-title;
   font-weight: 400;
@@ -19,6 +63,8 @@ body {
 
 .feature-title,
 .product-title {
+  margin: 0;
+  padding: 0;
   font-size: $f-sec-title;
   line-height: $l-sec-title;
   font-weight: 400;

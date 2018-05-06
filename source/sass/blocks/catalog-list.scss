@@ -1,5 +1,5 @@
 .catalog-list {
-  list-style: none;
+  @include reset-list;
 }
 
 .catalog-list__title {
@@ -10,4 +10,24 @@
 .catalog-list__info {
   font-size: $f-description;
   line-height: $l-description + 4;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .catalog-list__item {
+    width: 324px;
+    height: 512px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-list__item {
+    width: 246px;
+  }
 }

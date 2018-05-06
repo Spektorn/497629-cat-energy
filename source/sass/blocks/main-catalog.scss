@@ -1,1 +1,16 @@
-/*Временно*/
+.main-catalog {
+  width: 320px;
+  margin: 0 auto;
+
+  @include outline-r;
+}
+
+@media (min-width: $tablet-width) {
+  .main-catalog {
+    width: auto;
+  }
+
+  .main-catalog__wrapper {
+    @include outline-o;
+  }
+}

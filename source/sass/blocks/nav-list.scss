@@ -1,6 +1,10 @@
 .nav-list {
+  @include reset-list;
   backgorund-color: $base-color;
-  list-style: none;
+}
+
+.nav-list__item {
+  @include reset;
 }
 
 .nav-list__link {

@@ -5,3 +5,36 @@
   color: $f-opt-color;
   backgorund-color: $base-color;
 }
+
+.main-nav__nav-btn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.main-nav__nav-list {
+  height: 200px;
+
+  @include outline-b;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__nav-btn {
+    @include visually-hide;
+  }
+
+  .main-nav__nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 445px;
+    height: 85px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__nav-list {
+    width: 485px;
+    height: 120px;
+  }
+}

@@ -1,3 +1,34 @@
+.example {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $opt-color-gy;
+
+  @include outline-r;
+}
+
 .example__cost {
   color: $f-opt-color;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    width: auto;
+    background-color: $base-color;
+  }
+
+  .example__wrapper {
+    @include outline-o;
+  }
+
+  .example-slider {
+    background-color: $opt-color-gy;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

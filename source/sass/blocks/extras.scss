@@ -1,4 +1,29 @@
+.extras {
+  width: 320px;
+  margin: 0 auto;
+
+  @include outline-r;
+}
+
 .extras__title {
   font-size: $f-sec-title;
   line-height: $l-sec-title;
+}
+
+@media (min-width: $tablet-width) {
+  .extras {
+    width: auto;
+  }
+
+  .extras__wrapper {
+    @include outline-o;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extras__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

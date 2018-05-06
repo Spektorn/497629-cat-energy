@@ -1,9 +1,15 @@
 .extras-list {
-  list-style: none;
+  @include reset-list;
 }
 
 .extras-list__title {
   font-size: $f-sec;
   line-height: $l-sec;
   text-transform: uppercase;
+}
+
+@media (min-width: $desktop-width) {
+  .extras-list {
+    width: 700px;
+  }
 }

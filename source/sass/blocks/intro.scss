@@ -1,7 +1,21 @@
 .intro {
+  width: 320px;
+  margin: 0 auto;
   background-color: $base-color;
+
+  @include outline-r;
+}
+
+.intro__wrapper {
+  padding-top: 15px;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+}
+
+.intro__main-info {
+  height: 480px;
+
+  @include outline-o;
 }
 
 .intro__slogan {
@@ -12,4 +26,42 @@
 .intro__title {
   line-height: 44px;
   color: $base-color;
+}
+
+.intro__cards-list {
+  height: 555px;
+
+  @include outline-o;
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    width: auto;
+  }
+
+  .intro__main-info {
+    height: 865px;
+  }
+
+  .intro__cards-list {
+    height: 775px;
+  }
+
+  .intro__slogan,
+  .intro__title {
+    color: $f-opt-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro__main-info {
+    height: 575px;
+  }
+
+  .intro__cards-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 375px;
+  }
 }
