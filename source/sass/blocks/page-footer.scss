@@ -2,11 +2,11 @@
   width: 320px;
   margin: 0 auto;
   background-color: $opt-color-gy;
+
   @include outline-r;
 }
 
 @media (min-width: $tablet-width) {
-
   .page-footer {
     width: auto;
   }

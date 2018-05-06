@@ -1,6 +1,7 @@
 .features {
   width: 320px;
   margin: 0 auto;
+
   @include outline-r;
 }
 
@@ -13,13 +14,13 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .features {
     width: auto;
   }
 
   .features__wrapper {
     height: 730px;
+
     @include outline-o;
   }
 
@@ -36,7 +37,6 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .features__wrapper {
     height: 445px;
   }

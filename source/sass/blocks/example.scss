@@ -2,6 +2,7 @@
   width: 320px;
   margin: 0 auto;
   background-color: $opt-color-gy;
+
   @include outline-r;
 }
 
@@ -10,7 +11,6 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .example {
     width: auto;
     background-color: $base-color;
@@ -26,7 +26,6 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .example__wrapper {
     display: flex;
     flex-direction: row;

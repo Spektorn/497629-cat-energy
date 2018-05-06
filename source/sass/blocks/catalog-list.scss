@@ -13,7 +13,6 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .catalog-list {
     display: flex;
     flex-direction: row;
@@ -28,7 +27,6 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .catalog-list__item {
     width: 246px;
   }

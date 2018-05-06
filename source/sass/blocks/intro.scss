@@ -2,6 +2,7 @@
   width: 320px;
   margin: 0 auto;
   background-color: $base-color;
+
   @include outline-r;
 }
 
@@ -13,6 +14,7 @@
 
 .intro__main-info {
   height: 480px;
+
   @include outline-o;
 }
 
@@ -28,11 +30,11 @@
 
 .intro__cards-list {
   height: 555px;
+
   @include outline-o;
 }
 
 @media (min-width: $tablet-width) {
-
   .intro {
     width: auto;
   }
@@ -47,12 +49,11 @@
 
   .intro__slogan,
   .intro__title {
-  color: $f-opt-color;
+    color: $f-opt-color;
   }
 }
 
 @media (min-width: $desktop-width) {
-
   .intro__main-info {
     height: 575px;
   }
