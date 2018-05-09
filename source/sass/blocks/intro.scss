@@ -2,36 +2,39 @@
   width: 320px;
   margin: 0 auto;
   background-color: $base-color;
-
-  @include outline-r;
 }
 
 .intro__wrapper {
-  padding-top: 15px;
+  padding-top: 25px;
+  text-align: center;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
 
 .intro__main-info {
-  height: 480px;
+  background-image: url(../../img/index-can-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-size: 280px 271px;
+  background-position: 0 140px;
+}
 
-  @include outline-o;
+.intro__title {
+  margin-bottom: 25px;
+  line-height: 36px;
+  color: $base-color;
 }
 
 .intro__slogan {
+  @include reset;
+  margin-bottom: 302px;
+  line-height: 14px;
   color: $base-color;
   text-transform: uppercase;
 }
 
-.intro__title {
-  line-height: 44px;
-  color: $base-color;
-}
-
 .intro__cards-list {
-  height: 555px;
-
-  @include outline-o;
+  padding-top: 22px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -39,29 +42,68 @@
     width: auto;
   }
 
-  .intro__main-info {
-    height: 865px;
+  .intro__wrapper {
+    padding-top: 31px;
+    background-color: $base-color;
+    background-image: none;
   }
 
-  .intro__cards-list {
-    height: 775px;
+  .intro__main-info {
+    min-height: 812px;
+    padding-left: 120px;
+    padding-right: 155px;
+    text-align: left;
+    background-size: 200px 200px;
   }
 
   .intro__slogan,
   .intro__title {
     color: $f-opt-color;
   }
+
+  .intro__title {
+    margin-bottom: 34px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .intro__slogan {
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .intro__btn {
+    width: 245px;
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .intro__cards-list {
+    padding-top: 0;
+    padding-bottom: 46px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .intro__main-info {
-    height: 575px;
+    min-height: 476px;
+    padding-left: 85px;
+    padding-right: 705px;
+  }
+
+  .intro__wrapper {
+    padding-top: 50px;
+    background-image: url(../../img/index-background-mobile@1x.jpg);
+    background-repeat: no-repeat;
   }
 
   .intro__cards-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 375px;
+    padding-top: 82px;
+    padding-bottom: 76px;
   }
 }

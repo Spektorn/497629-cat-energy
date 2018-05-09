@@ -2,11 +2,24 @@
   width: 320px;
   margin: 0 auto;
   background-color: $opt-color-gy;
+}
 
-  @include outline-r;
+.example__wrapper {
+  padding-top: 14px;
+}
+
+.example__title {
+  margin-bottom: 32px;
+}
+
+.example__description {
+  @include reset;
+  margin-right: 12px;
+  font-family: "Arial";
 }
 
 .example__cost {
+  @include reset;
   color: $f-opt-color;
 }
 
@@ -16,12 +29,12 @@
     background-color: $base-color;
   }
 
-  .example__wrapper {
-    @include outline-o;
-  }
-
   .example-slider {
     background-color: $opt-color-gy;
+  }
+
+  .example__title {
+    font-size: 60px;
   }
 }
 

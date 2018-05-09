@@ -1,22 +1,16 @@
 .extras {
   width: 320px;
   margin: 0 auto;
-
-  @include outline-r;
 }
 
 .extras__title {
-  font-size: $f-sec-title;
-  line-height: $l-sec-title;
+  font-size: 24px;
+  line-height: 36px;
 }
 
 @media (min-width: $tablet-width) {
   .extras {
     width: auto;
-  }
-
-  .extras__wrapper {
-    @include outline-o;
   }
 }
 

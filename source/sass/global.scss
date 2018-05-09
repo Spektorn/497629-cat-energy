@@ -13,8 +13,8 @@ body {
   margin: 0 auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-size: $f-main;
-  line-height: $l-main;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
   color: $f-base-color;
   background-color: lightblue;
@@ -55,8 +55,8 @@ body {
 .section-title {
   margin: 0;
   padding: 0;
-  font-size: $f-title;
-  line-height: $l-title;
+  font-size: 36px;
+  line-height: 60px;
   font-weight: 400;
   color: $f-opt-color;
 }
@@ -65,8 +65,8 @@ body {
 .product-title {
   margin: 0;
   padding: 0;
-  font-size: $f-sec-title;
-  line-height: $l-sec-title;
+  font-size: 24px;
+  line-height: 36px;
   font-weight: 400;
   color: $f-opt-color;
 }
@@ -77,10 +77,13 @@ body {
 
 .btn {
   display: block;
-  font-size: $f-sec;
-  line-height: $l-sec;
+  width: 280px;
+  padding: 11px 0;
+  font-size: 14px;
+  line-height: 18px;
   color: $base-color;
   text-decoration: none;
+  text-align: center;
   text-transform: uppercase;
   background-color: $opt-color-gn;
 

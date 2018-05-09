@@ -1,3 +1,8 @@
+.logo-container__logo-image {
+  width: 191px;
+  height: 44px;
+}
+
 @media (min-width: $tablet-width) {
   .logo-container__logo-image {
     width: 175px;
@@ -7,7 +12,7 @@
 
 @media (min-width: $desktop-width) {
   .logo-container__logo-image {
-    width: 208px;
+    width: 202px;
     height: 60px;
   }
 }

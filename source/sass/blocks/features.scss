@@ -1,27 +1,83 @@
 .features {
   width: 320px;
   margin: 0 auto;
-
-  @include outline-r;
-}
-
-.features__wrapper {
-  height: 420px;
+  background-color: $base-color;
 }
 
 .features__list {
   @include reset-list;
+  padding-top: 22px;
+  padding-bottom: 34px;
+}
+
+.features__item {
+  position: relative;
+  margin-bottom: 4px;
+  padding: 8px 0;
+  padding-left: 80px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+  }
+
+  &::before {
+    top: 5px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $opt-color-gn;
+  }
+  
+  &::after {
+    top: 10px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+  }
+
+  &--healthy::after {
+    background-image: url(../../img/advantage-leaf@1x.png);
+  }
+    
+  &--fast::after {
+    background-image: url(../../img/advantage-powder@1x.png);
+  }
+    
+  &--use::after {
+    background-image: url(../../img/advantage-dining@1x.png);
+  }
+    
+  &--result::after {
+    background-image: url(../../img/advantage-clock@1x.png);
+  } 
+}
+
+.features__number {
+  display: none;
+}
+
+.features__description {
+  @include reset;
+  font-family: "Arial";
 }
 
 @media (min-width: $tablet-width) {
   .features {
     width: auto;
+    border-bottom: 1px solid $border-color;
   }
 
-  .features__wrapper {
-    height: 730px;
-
-    @include outline-o;
+  .features__title {
+    font-size: 60px;
   }
 
   .features__list {
@@ -29,15 +85,64 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 38px;
+    padding-bottom: 0;
   }
 
   .features__item {
-    width: 280px;
+    width: 324px;
+    min-height: 232px;
+    margin-top: 26px;
+    margin-bottom: 56px;
+    padding-top: 115px;
+    padding-left: 0;
+    padding-right: 75px;
+
+    &::before {
+      top: 5px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-color: $opt-color-gn;
+    }
+  
+    &::after {
+      top: 20px;
+      left: 15px;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: 50px 50px;
+    }
+  }
+
+  .features__number {
+    position: absolute;
+    top: -35px;
+    left: 115px;
+    display: block;
+    z-index: 1;
+    font-size: 281px;
+    line-height: 281px;
+    color: $opt-color-gy;
+  }
+  
+  .features__description {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .features__wrapper {
-    height: 445px;
+  .features {
+    border-bottom: 0;
+  }
+
+  .features__item {
+    width: 245px;
+    margin-bottom: 78px;
+    padding-right: 0;
   }
 }

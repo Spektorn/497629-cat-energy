@@ -1,3 +1,7 @@
 .slider__list {
   @include reset-list;
 }
+
+.slider__toggles {
+  @include reset;
+}

@@ -18,7 +18,7 @@
 @media (min-width: $tablet-width) {
   .page-header {
     width: auto;
-    padding: 24px 0; 
+    padding: 24px 0;
   }
 
   .page-header__wrapper {
@@ -30,5 +30,11 @@
   .page-header__logo-container {
     padding: 0;
     border-bottom: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding: 53px 0;
   }
 }
