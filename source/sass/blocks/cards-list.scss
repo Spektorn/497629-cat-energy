@@ -24,7 +24,7 @@
   }
 
   &::before {
-    top: 25px;
+    top: 20px;
     left: 18px;
     width: 55px;
     height: 55px;
@@ -35,10 +35,11 @@
 
   &::after {
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--fit::after {
-    top: 24px;
+    top: 19px;
     left: 28px;
     width: 35px;
     height: 49px;
@@ -47,7 +48,7 @@
   }
 
   &--mass::after {
-    top: 36px;
+    top: 33px;
     left: 11px;
     width: 67px;
     height: 28px;
@@ -63,13 +64,13 @@
 
 .cards-list__description {
   @include reset;
-  margin-top: 34px;
+  margin-top: 32px;
   margin-bottom: 24px;
   font-family: "Arial";
 }
 
 .cards-list__link-container {
-  padding-top: 20px;
+  padding-top: 17px;
   border-top: 1px solid rgba(217, 217, 217, 1);
 }
 
@@ -79,9 +80,20 @@
   color: $f-opt-color;
   text-transform: uppercase;
 
+  &:hover .cards-list__link-icon,
+  &:focus .cards-list__link-icon {
+    width: 33px;
+  }
+
   &:active {
     color: transparentize($f-opt-color, 0.7);
   }
+}
+
+.cards-list__link-icon-container {
+  display: inline-block;
+  height: 11px;
+  margin-left: 8px;
 }
 
 @media (min-width: $tablet-width) {
@@ -89,23 +101,23 @@
     min-height: 372px;
     margin-bottom: 30px;
     padding-top: 78px;
-    padding-bottom: 50px;
-    padding-right: 280px;
+    padding-bottom: 56px;
     padding-left: 54px;
+    padding-right: 280px;
 
     &--mass {
       padding-right: 315px;
     }
 
     &::before {
-      top: 85px;
+      top: 92px;
       left: 445px;
-      width: 200px;
-      height: 200px;
+      width: 204px;
+      height: 204px;
     }
 
     &--fit::after {
-      top: 75px;
+      top: 82px;
       left: 475px;
       width: 140px;
       height: 194px;
@@ -113,7 +125,7 @@
     }
 
     &--mass::after {
-      top: 135px;
+      top: 136px;
       left: 410px;
       width: 268px;
       height: 112px;
@@ -127,8 +139,8 @@
   }
 
   .cards-list__description {
-    margin-top: 25px;
-    margin-bottom: 64px;
+    margin-top: 26px;
+    margin-bottom: 60px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -145,22 +157,21 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .cards-list__item {
     width: 568px;
     margin-bottom: 0;
-    padding-right: 54px;
     padding-bottom: 60px;
+    padding-right: 56px;
 
     &::before {
-      top: 50px;
+      top: 48px;
       left: 50px;
       width: 105px;
       height: 105px;
     }
 
     &--fit::after {
-      top: 45px;
+      top: 43px;
       left: 65px;
       width: 70px;
       height: 97px;
@@ -168,7 +179,7 @@
     }
 
     &--mass::after {
-      top: 70px;
+      top: 72px;
       left: 33px;
       width: 134px;
       height: 56px;
@@ -177,7 +188,7 @@
   }
 
   .cards-list__title {
-    margin-left: 164px;
+    margin-left: 160px;
   }
 
   .cards-list__description {

@@ -1,9 +1,39 @@
+.set {
+  @include reset;
+  padding: 20px;
+  border: none;
+
+  &--radio {
+    border: 1px solid rgba(237, 237, 237, 1);
+  }
+}
+
 .set__legend {
+  padding-top: 28px;
+//  padding-bottom: 34px;
   font-size: 24px;
   line-height: 24px;
 }
 
+.set__input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include reset;
+
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .set__label {
+  @include reset;
+  margin-right: 16px;
+  padding-top: 14px;
+  padding-bottom: 13px;
   font-size: 16px;
   line-height: 18px;
   color: $f-modal-color;
@@ -11,9 +41,111 @@
 }
 
 .set__input {
+  flex-grow: 2;
+  box-sizing: border-box;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-left: 15px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   color: $f-base-color;
   text-transform: uppercase;
+  border: 1px solid rgba(231, 231, 231, 1);
+}
+
+.set--contacts .set__input-wrapper {
+  position: relative;
+}
+
+.set--contacts .set__input {
+  padding-right: 47px;
+}
+
+.set--contacts .set__input-icon {
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: 1px;
+  width: 47px;
+  height: 43px;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  text-align: center;
+  background-color: $base-color;
+
+  &--phone {
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+}
+
+.set--radio {
+  padding: 15px 19px;
+}
+
+.set--radio .set__label {
+  padding: 8px 0;
+}
+
+.set--radio .set__input-wrapper {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.set--radio .set__label,
+.set--checkbox .set__label {
+  position: relative;
+  padding-left: 46px;
+  cursor: pointer;
+}
+
+.set--radio input[type="radio"] + .set__radio-ind {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  background-color: $base-color;
+  border: 1px solid $border-color;
+  border-radius: 50%;
+}
+
+.set--radio input[type="radio"]:checked + .set__radio-ind::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  background-color: $opt-color-gn;
+  border: 1px solid $opt-color-gn;
+  border-radius: 50%;
+}
+
+.set--checkbox input[type="checkbox"] + .set__checkbox-ind {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  border: 1px solid $border-color;
+}
+
+.set--checkbox input[type="checkbox"]:checked + .set__checkbox-ind {
+  background-image: url(../../img/icon-tick.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 16px;
+}
+
+.set--commet .set__input {
+  width: 100%;
 }

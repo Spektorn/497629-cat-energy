@@ -1,4 +1,38 @@
 .copyright__html {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Arial";
   font-size: 16px;
+  line-height: 16px;
   color: $f-base-color;
+
+  &:hover path,
+  &:focus path {
+    fill: $opt-color-gn;
+  }
+
+  &:active path {
+    fill: transparentize($opt-color-gn, 0.7);
+  }
+
+  &:active {
+    color: transparentize($f-base-color, 0.7);
+  }
+}
+
+.copyright__html-name {
+  padding: 10px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding-top: 6px;
+    padding-bottom: 20px;
+  }
+
+  .copyright__html-logo {
+    margin-left: 24px;
+  }
 }

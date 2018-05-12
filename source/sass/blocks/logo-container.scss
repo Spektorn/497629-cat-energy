@@ -1,3 +1,14 @@
+.logo-container__logo {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .logo-container__logo-image {
   width: 191px;
   height: 44px;

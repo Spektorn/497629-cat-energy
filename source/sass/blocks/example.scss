@@ -5,22 +5,79 @@
 }
 
 .example__wrapper {
-  padding-top: 14px;
+  padding: 0;
+  padding-top: 18px;
 }
 
 .example__title {
-  margin-bottom: 32px;
+  margin-bottom: 22px;
+  padding-left: 20px;
 }
 
 .example__description {
   @include reset;
+  margin: 10px 0;
   margin-right: 12px;
+  padding-left: 20px;
+  padding-right: 15px;
   font-family: "Arial";
+}
+
+.example__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include reset-list;
+  padding: 14px 20px;
+  padding-bottom: 34px;
+}
+
+.example__item {
+  position: relative;
+  width: 124px;
+  padding: 15px 0;
+  text-align: center;
+  border: 1px solid rgba(207, 207, 207, 1);
+  border-radius: 3px;
+}
+
+.example__item-number {
+  font-size: 24px;
+  line-height: 24px;
+  color: $f-opt-color;
+  text-transform: uppercase;
+}
+
+.example__item-description {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  @include reset;
+
+  width: 87px;
+  margin-top: -8px;
+  margin-left: -44px;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 12px;
+  background-color: $opt-color-gy;
+}
+
+.example__item--weight .example__item-description {
+  padding: 0 5px;
 }
 
 .example__cost {
   @include reset;
   color: $f-opt-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.example__slider {
+  padding-top: 34px;
 }
 
 @media (min-width: $tablet-width) {
@@ -29,12 +86,74 @@
     background-color: $base-color;
   }
 
-  .example-slider {
+  .example__wrapper {
+    padding-top: 43px;
+  }
+
+  .example__slider {
     background-color: $opt-color-gy;
   }
 
   .example__title {
+    margin-bottom: 65px;
+    padding: 0;
     font-size: 60px;
+  }
+
+  .example__description {
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .example__stats-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 42px 0; 
+  }
+
+  .example__list {
+    width: 366px;
+    padding: 0;
+  }
+
+  .example__item {
+    width: 162px;
+    padding: 17px 0;
+  }
+
+  .example__item-number {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .example__item-description {
+    position: absolute;
+    width: 114px;
+    margin-left: -57px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $base-color;
+  }
+
+  .example__item--time .example__item-description {
+    width: 142px;
+    padding: 0;
+    margin-left: -71px;
+  }
+
+  .example__cost {
+    width: 175px;
+    padding: 10px 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .example__slider {
+    margin-top: 215px;
+    padding-top: 34px;
   }
 }
 

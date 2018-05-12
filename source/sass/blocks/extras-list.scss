@@ -2,14 +2,134 @@
   @include reset-list;
 }
 
+.extras-list__item {
+  padding-top: 12px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(205, 205, 205, 1);
+
+  &:first-child {
+    border-top: 1px solid rgba(205, 205, 205, 1);
+  }
+}
+
 .extras-list__title {
+  margin-bottom: 12px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
   text-transform: uppercase;
+}
+
+.extras-list__info {
+  @include reset;
+  width: 100%;
+  font-family: "Arial";
+  line-height: 14px;
+}
+
+.extras-list__info-cell {
+  width: 50%;
+  padding: 0;
+
+  &--f {
+    text-align: left;
+  }
+
+  &--s {
+    text-align: right;
+  }
+}
+
+.extras-list__btn {
+  margin-top: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .extras-list__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 38px;
+    padding-top: 25px;
+    padding-bottom: 27px;
+    border: 1px solid rgba(205, 205, 205, 1);
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid rgba(205, 205, 205, 1);
+    }
+  }
+  
+  .extras-list__title {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  
+  .extras-list__info {
+    width: auto;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extras-list__info-cell {
+    width: auto;
+
+    &--f {
+      padding-right: 25px;
+      text-align: right;
+    }
+
+    &--s {
+      padding-left: 25px;
+    }
+  }
+
+  .extras-list__btn {
+    width: 100%;
+    margin-top: 25px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .extras-list {
-    width: 700px;
+    width: 895px;
+  }
+
+  .extras-list__item {
+    justify-content: flex-end;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .extras-list__title {
+    min-width: 165px;
+    margin-right: auto;
+    padding: 8px 0;
+  }
+
+  .extras-list__info {
+    min-width: 290px;
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extras-list__info-cell {
+    width: 50%;
+    padding: 0;
+
+    &--f {
+      text-align: left;
+    }
+  }
+
+  .extras-list__btn {
+    width: 245px;
+    margin: 0;
+    margin-left: 40px;
   }
 }

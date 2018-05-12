@@ -9,6 +9,11 @@
   justify-content: space-between;
   padding: 28px 20px;
   background-color: $base-color;
+
+  &--catalog,
+  &--form {
+    background-color: $opt-color-gy;
+  }
 }
 
 .main-map__frame-wrapper {
@@ -38,10 +43,12 @@
 
 @media (min-width: $tablet-width) {
   .main-map__wrapper {
-    padding: 66px 0;
+    padding: 66px 42px;
+    padding-bottom: 60px;
   }
 
   .main-map__frame {
+    @include reset;
     width: 100%;
     height: 398px;
   } 
@@ -65,14 +72,19 @@
 
 @media (min-width: $desktop-width) {
   .main-map__wrapper {
-//    position: absolute;
-//    z-index: 3;
-//    width: 570px;
-//    height: 201px;
+    position: absolute;
+    left: 110px;
+    z-index: 3;
+    width: 570px;
+    height: 201px;
+    padding-left: 78px;
+    padding-right: 90px;
   }
 
   .main-map__frame-wrapper {
     position: relative;
+
+    @include reset;
   }
 
   .main-map__frame {

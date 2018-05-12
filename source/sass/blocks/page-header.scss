@@ -18,13 +18,13 @@
 @media (min-width: $tablet-width) {
   .page-header {
     width: auto;
-    padding: 24px 0;
   }
 
   .page-header__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 24px 0;
   }
 
   .page-header__logo-container {
@@ -35,6 +35,17 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
+    background-image: url(../../img/index-background-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: right;
+  }
+
+  .page-header__wrapper {
     padding: 53px 0;
+  }
+
+  .page-header__main-nav {
+    background-color: transparent;
   }
 }

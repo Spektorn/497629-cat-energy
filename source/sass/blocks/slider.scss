@@ -2,6 +2,80 @@
   @include reset-list;
 }
 
+.slider__item--after {
+  display: none;
+}
+
 .slider__toggles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   @include reset;
+  padding-top: 30px;
+  padding-bottom: 36px;
+  padding-left: 64px;
+  padding-right: 59px;
+}
+
+.slider__label {
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+  color: $f-opt-color;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--after {
+    margin-left: 112px;
+  }
+}
+
+.slider__toggle-ind {
+  position: absolute;
+  width: 42px;
+  height: 14px;
+  background-color: $base-color;
+  border: 1px solid rgba(205, 205, 205, 1);
+
+  &--before {
+    top: 50%;
+    right: -60px;
+    margin-top: -7px;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &--after {
+    top: 50%;
+    left: -59px;
+    margin-top: -7px;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+  }
+}
+
+input[type="radio"]:checked + .slider__toggle-ind::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  display: block;
+  width: 35px;
+  height: 6px;
+  margin-top: -3px;
+  background-color: $opt-color-gn;
+  border: 1px solid $opt-color-gn;
+  border-radius: 3px;
+}
+
+input[type="radio"]:checked + .slider__toggle-ind--after::before {
+  left: 0;
+  right: 5px;
+}
+
+
+@media (min-width: $tablet-width) {
+  
 }

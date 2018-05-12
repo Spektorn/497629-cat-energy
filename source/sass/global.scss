@@ -52,6 +52,21 @@ body {
   overflow: hidden;
 }
 
+input.visually-hidden:checked,
+input.visually-hidden:focus,
+input.visually-hidden:active {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .section-title {
   margin: 0;
   padding: 0;
@@ -96,3 +111,35 @@ body {
     color: transparentize($base-color, 0.7);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .btn {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0;
+  }
+}
+
+.st0-head {
+  fill: #fdc305;
+}
+
+.st1-head {
+  fill: #f06351;
+}
+
+.st0-icon {
+  fill: #3F4242;
+}
+
+.st0-foot {
+  fill: #111111;
+}
+
+.st0-soc-icon {
+  fill: #666666;
+}
+/*Убрать у всех батонов эти свойства*/
+/*Цвет у адреса на разных страницах*/
+/*Адрес?*/
+/*Классы у свгшек*/

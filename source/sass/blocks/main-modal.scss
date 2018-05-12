@@ -1,14 +1,48 @@
 .main-modal {
   width: 320px;
   margin: 0 auto;
+  background-color: $base-color;
+}
+
+.main-modal__wrapper {
+  padding: 0;
+}
+
+.main-modal__title {
+  padding-top: 16px;
+  padding-bottom: 31px;
+  padding-left: 20px;
 }
 
 .main-modal__description {
+  @include reset;
+  padding-right: 52px;
+  padding-left: 20px;
   text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
   .main-modal {
     width: auto;
+  }
+
+  .main-modal__wrapper {
+    padding: 0 40px;
+  }
+
+  .main-modal__title {
+    padding-top: 34px;
+    font-size: 60px;
+  }
+
+  .main-modal__description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-modal__title {
+    padding-top: 22px;
   }
 }

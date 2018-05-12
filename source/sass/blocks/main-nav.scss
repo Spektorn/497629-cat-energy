@@ -33,6 +33,7 @@
   top: 21px;
   left: 23px;
   background-image: url(../../img/icon-close.svg);
+  background-size: 18px 18px;
 }
 
 .main-nav--closed .main-nav__nav-btn::before {
@@ -40,6 +41,7 @@
   left: 20px;
   width: 24px;
   background-image: url(../../img/icon-mobile-menu.svg);
+  background-size: 24px 18px;
 }
 
 @media (max-width: $mobile-width-only) {
