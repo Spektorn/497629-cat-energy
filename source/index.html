@@ -128,59 +128,66 @@
         </div>
       </section>
       <section class="example">
-        <div class="example__wrapper wrapper">
-          <div class="example__info">
-            <h2 class="example__title section-title">Живой пример</h2>
-            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-            <div class="example__stats-wrapper">
-              <ul class="example__list">
-                <li class="example__item example__item--weight">
-                  <span class="example__item-number">5 кг</span>
-                  <p class="example__item-description">снижение веса</p>
-                </li>
-                <li class="example__item example__item--time">
-                  <span class="example__item-number">60 дней</span>
-                  <p class="example__item-description">затрачено времени</p>
-                </li>
-              </ul>
-              <p class="example__cost">Затраты на питание: 15 000 руб.</p>
+        <div class="example__container">
+          <div class="example__wrapper wrapper">
+            <div class="example__info">
+              <h2 class="example__title section-title">Живой пример</h2>
+              <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+              <div class="example__stats-wrapper">
+                <ul class="example__list">
+                  <li class="example__item example__item--weight">
+                    <span class="example__item-number">5 кг</span>
+                    <p class="example__item-description">снижение веса</p>
+                  </li>
+                  <li class="example__item example__item--time">
+                    <span class="example__item-number">60 дней</span>
+                    <p class="example__item-description">затрачено времени</p>
+                  </li>
+                </ul>
+                <p class="example__cost">Затраты на питание: 15 000 руб.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="example__slider slider">
-          <ul class="slider__list">
-            <li class="slider__item slider__item--before">
-              <img src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
-            </li>
-            <li class="slider__item slider__item--after">
-              <img src="img/after-mobile@1x.png" width="320" height="240" alt="Стало">
-            </li>
-          </ul>
-          <p class="slider__toggles">
-            <label class="slider__label slider__label--before">
-              Было
-              <input class="slider__toggle slider__toggle--before visually-hidden" type="radio" name="slide" value="1" checked>
-              <span class="slider__toggle-ind slider__toggle-ind--before"></span>
-            </label>
-            <label class="slider__label slider__label--after">
-              Стало
-              <input class="slider__toggle slider__toggle--after visually-hidden" type="radio" name="slide" value="2">
-              <span class="slider__toggle-ind slider__toggle-ind--after"></span>
-            </label>
-          </p>
-          <div class="slider__range-toggles">
-            <div class="slider__range-bar"></div>
-            <div class="slider__range-toggle"></div>
+          <div class="example__slider slider">
+            <ul class="slider__list">
+              <li class="slider__item slider__item--before">
+                <img src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
+              </li>
+              <li class="slider__item slider__item--after">
+                <img src="img/after-mobile@1x.png" width="320" height="240" alt="Стало">
+              </li>
+            </ul>
+            <p class="slider__toggles">
+              <label class="slider__label slider__label--before">
+                Было
+                <input class="slider__toggle slider__toggle--before visually-hidden" type="radio" name="slide" value="1" checked>
+                <span class="slider__toggle-ind slider__toggle-ind--before"></span>
+              </label>
+              <label class="slider__label slider__label--after">
+                Стало
+                <input class="slider__toggle slider__toggle--after visually-hidden" type="radio" name="slide" value="2">
+                <span class="slider__toggle-ind slider__toggle-ind--after"></span>
+              </label>
+            </p>
+            <div class="slider__range-toggles">
+              <button class="slider__range-btn slider__range-btn--before">Было</button>
+              <div class="slider__range-bar">
+                <div class="slider__range-toggle" tabindex="0"></div>
+              </div>
+              <button class="slider__range-btn slider__range-btn--after">Стало</button>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
       <section class="page-footer__main-map main-map main-map--index">
-        <div class="main-map__wrapper wrapper">
-          <h2 class="visually-hidden">Наш адрес</h2>
-          <p class="main-map__invite">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="main-map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="main-map__container">
+          <div class="main-map__wrapper wrapper">
+            <h2 class="visually-hidden">Наш адрес</h2>
+            <p class="main-map__invite">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="main-map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </div>
         <div class="main-map__frame-wrapper wrapper">
           <iframe class="main-map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5899760802426!2d30.322383013879175!3d59.93894564116635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca640933%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sru!4v1525883811668" width="320" height="364" style="border:0" allowfullscreen></iframe>

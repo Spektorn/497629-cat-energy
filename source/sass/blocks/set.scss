@@ -1,19 +1,20 @@
 .set {
   @include reset;
-  padding: 20px;
+  padding: 23px 20px;
   border: none;
 
   &--radio {
+    padding: 15px 19px;
     border: 1px solid rgba(237, 237, 237, 1);
   }
 }
 
 .set__legend {
-  padding-top: 28px;
-//  padding-bottom: 34px;
+  padding: 0;
   font-size: 24px;
   line-height: 24px;
   color: $f-opt-color;
+  text-align: left;
 }
 
 .set__input-wrapper {
@@ -52,7 +53,19 @@
   line-height: 18px;
   color: $f-base-color;
   text-transform: uppercase;
-  border: 1px solid rgba(231, 231, 231, 1);
+  border: 1px solid rgba(230, 230, 230, 1);
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    border-color: rgba(68, 68, 68, 1);
+  }
+
+  &--error {
+    border-color: rgba(255, 130, 130, 1);
+  }
 }
 
 .set--contacts .set__input-wrapper {
@@ -81,20 +94,12 @@
   }
 }
 
-.set--radio {
-  padding: 15px 19px;
+.set__input:focus + .set__input-icon path {
+  fill: $opt-color-gn;
 }
 
-.set--radio .set__label {
-  padding: 8px 0;
-}
-
-.set--radio .set__input-wrapper {
-  margin-bottom: 8px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+.set__input--error + .set__input-icon path {
+  fill: rgba(255, 130, 130, 1);
 }
 
 .set--radio .set__label,
@@ -102,6 +107,19 @@
   position: relative;
   padding-left: 46px;
   cursor: pointer;
+}
+
+.set--radio .set__label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.set--radio .set__input-wrapper {
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .set--radio input[type="radio"] + .set__radio-ind {
@@ -112,7 +130,7 @@
   height: 30px;
   margin-top: -15px;
   background-color: $base-color;
-  border: 1px solid $border-color;
+  border: 1px solid rgba(208, 208, 208, 1);
   border-radius: 50%;
 }
 
@@ -128,6 +146,18 @@
   background-color: $opt-color-gn;
   border: 1px solid $opt-color-gn;
   border-radius: 50%;
+}
+
+.set--radio input[type="radio"]:hover + .set__radio-ind {
+  border-color: rgba(191, 191, 191, 1);
+}
+
+.set--radio input[type="radio"]:focus + .set__radio-ind {
+  outline: 1px auto;
+}
+
+.set--radio input[type="radio"]:active + .set__radio-ind {
+  opacity: 0.3;
 }
 
 .set--checkbox input[type="checkbox"] + .set__checkbox-ind {
@@ -147,6 +177,109 @@
   background-size: 22px 16px;
 }
 
-.set--commet .set__input {
-  width: 100%;
+.set--checkbox input[type="checkbox"]:hover + .set__checkbox-ind {
+  border-color: rgba(186, 186, 186, 1);
+}
+
+.set--checkbox input[type="checkbox"]:focus + .set__checkbox-ind {
+  outline: 1px auto;
+}
+
+.set--checkbox input[type="checkbox"]:active + .set__checkbox-ind {
+  opacity: 0.3;
+}
+
+.set--contacts .set__label {
+  margin-right: 12px;
+}
+
+.set--contacts {
+  margin: 10px 0;
+  padding: 0;
+  border-top: 3px solid $opt-color-gn;
+}
+
+.set--contacts .set__legend {
+  width: 222px;
+  margin-right: auto;
+  padding: 0 20px;
+  padding-top: 18px;
+}
+
+.set--contacts .set__wrapper {
+  padding: 35px 20px;
+  padding-bottom: 18px;
+}
+
+.set--comment {
+  margin: 10px 0;
+  padding: 0;
+  border-top: 3px solid $opt-color-gn;
+}
+
+.set--comment .set__legend {
+  width: 164px;
+  margin-right: auto;
+  padding: 0 20px;
+  padding-bottom: 5px;
+}
+
+.set--comment .set__wrapper {
+  padding: 28px 20px;
+  padding-bottom: 18px;
+}
+
+.set--checkbox {
+  margin: 10px 0;
+  padding: 0;
+  border-top: 3px solid $opt-color-gn;
+}
+
+.set--checkbox .set__legend {
+  width: 180px;
+  margin-right: auto;
+  padding: 0 20px;
+  padding-bottom: 5px;
+}
+
+.set--checkbox .set__wrapper {
+  padding: 35px 20px;
+  padding-bottom: 18px;
+}
+
+.set--comment .set__input {
+  width: 280px;
+  height: 150px;
+}
+
+.set--checkbox .set__wrapper {
+  padding-top: 20px;
+}
+
+.set--checkbox .set__label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.set--checkbox .set__input-wrapper {
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+//  .set__label {
+//    font-size: 20px;
+//    line-height: 20px;
+//  }
+//
+//  .set__input {
+//    padding-top: 10px;
+//    padding-bottom: 10px;
+//    padding-left: 20px;
+//    font-size: 20px;
+//    line-height: 20px;
+//  }
 }
