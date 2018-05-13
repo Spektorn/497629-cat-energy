@@ -23,14 +23,35 @@
   .modal {
     padding-top: 42px;
   }
+
+  .modal__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .modal__btn {
+    margin: 0;
+    margin-right: 64px;
+    padding: 15px 0;
+    font-size: 20px;
+  }
+
+  .modal__reminder {
+    padding: 12px 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .modal {
+  .modal__double-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 1220px;
+    margin: 0 auto;
   }
 
   .set {

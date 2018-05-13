@@ -65,49 +65,51 @@
             <p class="main-modal__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
           </div>
           <form class="main-modal__modal modal" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="modal__set set set--main-info">
-              <legend class="visually-hidden">Основная информация</legend>
-              <div class="set__wrapper">
-                <p class="set__input-wrapper">
-                  <label class="set__label" for="modal-name">Имя:*</label>
-                  <input class="set__input set__input--error" type="text" id="modal-name" name="name" placeholder="Барсик">
-                </p>
-                <p class="set__input-wrapper">
-                  <label class="set__label" for="modal-weight">Вес (кг):*</label>
-                  <input class="set__input" type="number" id="modal-weight" name="weight" value="7">
-                </p>
-                <p class="set__input-wrapper">
-                  <label class="set__label" for="modal-age">Возраст (лет):</label>
-                  <input class="set__input" type="number" id="modal-age" name="age" value="7">
-                </p>
-              </div>
-            </fieldset>
-            <fieldset class="modal__set set set--radio">
-              <legend class="visually-hidden">Тип программы</legend>
-              <div class="set__wrapper">
-                <p class="set__input-wrapper">
-                  <label class="set__label">
-                    <input class="visually-hidden" type="radio" name="program" value="1" checked>
-                    <span class="set__radio-ind"></span>
-                    Похудение
-                  </label>
-                </p>
-                <p class="set__input-wrapper">
-                  <label class="set__label">
-                    <input class="visually-hidden" type="radio" name="program" value="2">
-                    <span class="set__radio-ind"></span>
-                    Набор массы
-                  </label>
-                </p>
-                <p class="set__input-wrapper">
-                  <label class="set__label">
-                    <input class="visually-hidden" type="radio" name="program" value="3">
-                    <span class="set__radio-ind"></span>
-                    Не знаю (нужен ваш совет)
-                  </label>
-                </p>
-              </div>
-            </fieldset>
+            <div class="modal__double-wrapper">
+              <fieldset class="modal__set set set--main-info">
+                <legend class="visually-hidden">Основная информация</legend>
+                <div class="set__wrapper">
+                  <p class="set__input-wrapper">
+                    <label class="set__label" for="modal-name">Имя:*</label>
+                    <input class="set__input set__input--error" type="text" id="modal-name" name="name" placeholder="Барсик">
+                  </p>
+                  <p class="set__input-wrapper">
+                    <label class="set__label" for="modal-weight">Вес (кг):*</label>
+                    <input class="set__input" type="number" id="modal-weight" name="weight" value="7">
+                  </p>
+                  <p class="set__input-wrapper">
+                    <label class="set__label" for="modal-age">Возраст (лет):</label>
+                    <input class="set__input" type="number" id="modal-age" name="age" value="7">
+                  </p>
+                </div>
+              </fieldset>
+              <fieldset class="modal__set set set--radio">
+                <legend class="visually-hidden">Тип программы</legend>
+                <div class="set__wrapper">
+                  <p class="set__input-wrapper">
+                    <label class="set__label">
+                      <input class="visually-hidden" type="radio" name="program" value="1" checked>
+                      <span class="set__radio-ind"></span>
+                      Похудение
+                    </label>
+                  </p>
+                  <p class="set__input-wrapper">
+                    <label class="set__label">
+                      <input class="visually-hidden" type="radio" name="program" value="2">
+                      <span class="set__radio-ind"></span>
+                      Набор массы
+                    </label>
+                  </p>
+                  <p class="set__input-wrapper">
+                    <label class="set__label">
+                      <input class="visually-hidden" type="radio" name="program" value="3">
+                      <span class="set__radio-ind"></span>
+                      Не знаю (нужен ваш совет)
+                    </label>
+                  </p>
+                </div>
+              </fieldset>
+            </div>
             <fieldset class="modal__set set set--contacts">
               <legend class="set__legend legend">Контактные данные (владельца кота)</legend>
               <div class="set__wrapper wrapper">
@@ -172,8 +174,10 @@
                 </p>
               </div>
             </fieldset>
-            <button class="modal__btn btn" type="submit">Отправить заявку</button>
-            <b class="modal__reminder">* - Обязательные поля</b>
+            <div class="modal__wrapper wrapper">
+              <button class="modal__btn btn" type="submit">Отправить заявку</button>
+              <b class="modal__reminder">* - Обязательные поля</b>
+            </div>
           </form>
         </div>
       </section>

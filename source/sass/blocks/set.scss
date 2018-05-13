@@ -7,6 +7,18 @@
     padding: 15px 19px;
     border: 1px solid rgba(237, 237, 237, 1);
   }
+
+  &--contacts {
+    margin-top: 12px;
+  }
+
+  &--contacts,
+  &--comment,
+  &--checkbox {
+    margin: 10px 0;
+    padding: 0;
+    border-top: 3px solid $opt-color-gn;
+  }
 }
 
 .set__wrapper {
@@ -119,7 +131,7 @@
 }
 
 .set--radio .set__input-wrapper {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
   &:last-child {
     margin-bottom: 0;
@@ -193,21 +205,11 @@
   opacity: 0.3;
 }
 
-.set--contacts .set__label {
-  margin-right: 12px;
-}
-
-.set--contacts {
-  margin: 10px 0;
-  padding: 0;
-  border-top: 3px solid $opt-color-gn;
-}
-
 .set--contacts .set__legend {
   width: 222px;
   margin-right: auto;
-  padding: 0 20px;
   padding-top: 18px;
+  padding-left: 20px;
 }
 
 .set--contacts .set__wrapper {
@@ -215,10 +217,8 @@
   padding-bottom: 18px;
 }
 
-.set--comment {
-  margin: 10px 0;
-  padding: 0;
-  border-top: 3px solid $opt-color-gn;
+.set--contacts .set__label {
+  margin-right: 12px;
 }
 
 .set--comment .set__legend {
@@ -233,10 +233,9 @@
   padding-bottom: 18px;
 }
 
-.set--checkbox {
-  margin: 10px 0;
-  padding: 0;
-  border-top: 3px solid $opt-color-gn;
+.set--comment .set__input {
+  width: 280px;
+  height: 150px;
 }
 
 .set--checkbox .set__legend {
@@ -248,16 +247,8 @@
 
 .set--checkbox .set__wrapper {
   padding: 35px 20px;
-  padding-bottom: 18px;
-}
-
-.set--comment .set__input {
-  width: 280px;
-  height: 150px;
-}
-
-.set--checkbox .set__wrapper {
   padding-top: 25px;
+  padding-bottom: 18px;
 }
 
 .set--checkbox .set__label {
@@ -275,6 +266,7 @@
 
 @media (min-width: $tablet-width) {
   .set {
+    position: relative;
     width: 710px;
     margin: 0 auto; 
     padding: 0 40px;
@@ -286,7 +278,7 @@
 
     &--radio {
       width: 630px;
-      margin-bottom: 90px;
+      margin-bottom: 98px;
       padding: 0 22px;
       padding-top: 22px;
       padding-bottom: 24px;
@@ -297,6 +289,7 @@
     &--checkbox {
       width: auto;
       margin: 0;
+      padding: 0;
     }
 
     &--contacts .set__wrapper,
@@ -307,14 +300,68 @@
     }
   }
 
-  .set__legend {
+  .set--contacts .set__legend,
+  .set--comment .set__legend,
+  .set--checkbox .set__legend {
+    top: -26px;
+    left: 50%;
+    position: absolute;
+    margin-left: -364px;
+    padding: 0 42px;
     font-size: 36px;
     line-height: 36px;
+    background-color: $base-color;
   }
 
   .set--contacts .set__legend {
     width: 594px;
-    padding: 0 42px;
+    padding-right: 38px;
+  }
+  
+  .set--contacts .set__wrapper {
+    padding-top: 86px;
+    padding-bottom: 88px;
+  }
+
+  .set--contacts .set__input-icon {
+    top: 4px;
+  }
+
+  .set--comment .set__legend {
+    width: 259px;
+  }
+
+  .set--comment .set__wrapper {
+    padding-top: 88px;
+    padding-bottom: 83px;
+  }
+
+  .set--comment .set__input {
+    width: 631px;
+    height: 174px;
+  }
+
+  .set--checkbox .set__legend {
+    width: 292px;
+  }
+
+  .set--checkbox .set__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 68px;
+    padding-bottom: 23px;
+  }
+
+  .set--checkbox .set__label {
+    width: 288px;
+    max-height: 40px;
+    text-align: left;
+  }
+
+  .set--checkbox .set__input-wrapper {
+    margin-bottom: 32px;
   }
 
   .set__label {
@@ -371,5 +418,50 @@
     width: 40px;
     height: 40px;
     margin-top: -20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .set {
+    &--main-info {
+      margin: 0;
+      padding: 0;
+      padding-top: 40px;
+    }
+
+    &--radio {
+      margin-top: 40px;
+    }
+  }
+
+  .set--contacts .set__legend,
+  .set--comment .set__legend,
+  .set--checkbox .set__legend {
+    margin-left: -655px;
+  }
+
+  .set--contacts .set__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .set--contacts .set__input-wrapper {
+    width: 572px;
+  }
+
+  .set--contacts .set__input {
+    max-height: 52px;
+  }
+
+  .set--comment .set__input {
+    width: 100%;
+  }
+
+  .set--checkbox .set__label {
+    width: 248px;
   }
 }
