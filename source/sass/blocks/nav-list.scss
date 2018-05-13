@@ -9,7 +9,7 @@
   text-align: center;
   border-bottom: 1px solid $border-color;
 
-  &:last-child {
+  &--last-item {
     border-bottom: none;
   }
 }
@@ -31,7 +31,7 @@
 @media (min-width: $tablet-width) {
   .nav-list__item {
     padding: 10px 0;
-    padding-top: 17px;
+    padding-top: 20px;
     border-bottom: none;
 
     &--active {
@@ -48,12 +48,15 @@
 }
 
 @media (min-width: $desktop-width) {
-  .nav-list__item {
+  .nav-list--index .nav-list__item {
     border-color: $base-color;
   }
 
   .nav-list__link {
     font-size: 20px;
+  }
+
+  .nav-list--index .nav-list__link {
     color: $base-color;
 
     &:hover,

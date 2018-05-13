@@ -34,7 +34,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
+  .page-header--index {
     background-image: url(../../img/index-background-mobile@1x.jpg);
     background-repeat: no-repeat;
     background-size: 50% 100%;
@@ -43,9 +43,5 @@
 
   .page-header__wrapper {
     padding: 53px 0;
-  }
-
-  .page-header__main-nav {
-    background-color: transparent;
   }
 }

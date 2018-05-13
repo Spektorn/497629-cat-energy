@@ -30,52 +30,62 @@
   }
 }
 
-.slider__toggle-ind {
-  position: absolute;
-  width: 42px;
-  height: 14px;
-  background-color: $base-color;
-  border: 1px solid rgba(205, 205, 205, 1);
+.slider__range-toggles {
+  display: none;
+}
 
-  &--before {
-    top: 50%;
-    right: -60px;
-    margin-top: -7px;
-    border-right: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+@media (max-width: $mobile-width-only) {
+  .slider__toggle-ind {
+    position: absolute;
+    width: 42px;
+    height: 14px;
+    background-color: $base-color;
+    border: 1px solid rgba(205, 205, 205, 1);
+
+    &--before {
+      top: 50%;
+      right: -60px;
+      margin-top: -7px;
+      border-right: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &--after {
+      top: 50%;
+      left: -59px;
+      margin-top: -7px;
+      border-left: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; 
+    }
   }
 
-  &--after {
+  input[type="radio"]:checked + .slider__toggle-ind::before {
+    content: "";
+    position: absolute;
     top: 50%;
-    left: -59px;
-    margin-top: -7px;
-    border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px; 
+    left: 5px;
+    display: block;
+    width: 35px;
+    height: 6px;
+    margin-top: -3px;
+    background-color: $opt-color-gn;
+    border: 1px solid $opt-color-gn;
+    border-radius: 3px;
+  }
+
+  input[type="radio"]:checked + .slider__toggle-ind--after::before {
+    left: 0;
+    right: 5px;
   }
 }
-
-input[type="radio"]:checked + .slider__toggle-ind::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  display: block;
-  width: 35px;
-  height: 6px;
-  margin-top: -3px;
-  background-color: $opt-color-gn;
-  border: 1px solid $opt-color-gn;
-  border-radius: 3px;
-}
-
-input[type="radio"]:checked + .slider__toggle-ind--after::before {
-  left: 0;
-  right: 5px;
-}
-
 
 @media (min-width: $tablet-width) {
-  
+  .slider__toggles {
+    position: relative;
+    width: 570px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
 }
