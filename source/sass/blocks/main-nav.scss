@@ -1,6 +1,6 @@
 .main-nav {
-  font-size: $f-points;
-  line-height: $l-points;
+  font-size: 20px;
+  line-height: 20px;
   font-weight: 500;
   color: $f-opt-color;
   backgorund-color: $base-color;
@@ -9,32 +9,75 @@
 .main-nav__nav-btn {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 64px;
+  height: 63px;
+  padding: 0;
+  background-color: $base-color;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+  }
 }
 
-.main-nav__nav-list {
-  height: 200px;
+.main-nav--opened .main-nav__nav-btn::before {
+  top: 21px;
+  left: 23px;
+  background-image: url("../../img/icon-close.svg");
+  background-size: 18px 18px;
+}
 
-  @include outline-b;
+.main-nav--closed .main-nav__nav-btn::before {
+  top: 21px;
+  left: 20px;
+  width: 24px;
+  background-image: url("../../img/icon-mobile-menu.svg");
+  background-size: 24px 18px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__nav-list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__nav-list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__nav-list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__nav-btn {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .main-nav__nav-btn {
-    @include visually-hide;
+    display: none;
   }
 
   .main-nav__nav-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 445px;
-    height: 85px;
+    min-width: 440px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav__nav-list {
-    width: 485px;
-    height: 120px;
+    min-width: 480px;
   }
 }

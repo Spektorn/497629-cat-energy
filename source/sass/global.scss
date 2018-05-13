@@ -13,8 +13,8 @@ body {
   margin: 0 auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
-  font-size: $f-main;
-  line-height: $l-main;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
   color: $f-base-color;
   background-color: $base-color;
@@ -39,7 +39,22 @@ body {
   }
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+input.visually-hidden:checked,
+input.visually-hidden:focus,
+input.visually-hidden:active {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -55,8 +70,8 @@ body {
 .section-title {
   margin: 0;
   padding: 0;
-  font-size: $f-title;
-  line-height: $l-title;
+  font-size: 36px;
+  line-height: 60px;
   font-weight: 400;
   color: $f-opt-color;
 }
@@ -65,8 +80,8 @@ body {
 .product-title {
   margin: 0;
   padding: 0;
-  font-size: $f-sec-title;
-  line-height: $l-sec-title;
+  font-size: 24px;
+  line-height: 36px;
   font-weight: 400;
   color: $f-opt-color;
 }
@@ -77,10 +92,13 @@ body {
 
 .btn {
   display: block;
-  font-size: $f-sec;
-  line-height: $l-sec;
+  width: 280px;
+  padding: 11px 0;
+  font-size: 14px;
+  line-height: 18px;
   color: $base-color;
   text-decoration: none;
+  text-align: center;
   text-transform: uppercase;
   background-color: $opt-color-gn;
 
@@ -92,4 +110,32 @@ body {
   &:active {
     color: transparentize($base-color, 0.7);
   }
+}
+
+@media (min-width: $tablet-width) {
+  .btn {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0;
+  }
+}
+
+.st0-head {
+  fill: #fdc305;
+}
+
+.st1-head {
+  fill: #f06351;
+}
+
+.st0-icon {
+  fill: #3f4242;
+}
+
+.st0-foot {
+  fill: #111111;
+}
+
+.st0-soc-icon {
+  fill: #666666;
 }

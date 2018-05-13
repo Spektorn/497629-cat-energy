@@ -1,19 +1,468 @@
+.set {
+  @include reset;
+  padding: 23px 20px;
+  border: none;
+
+  &--radio {
+    padding: 15px 19px;
+    border: 1px solid rgba(237, 237, 237, 1);
+  }
+
+  &--contacts {
+    margin-top: 12px;
+  }
+
+  &--contacts,
+  &--comment,
+  &--checkbox {
+    margin: 10px 0;
+    padding: 0;
+    border-top: 3px solid $opt-color-gn;
+  }
+}
+
+.set__wrapper {
+  padding: 0;
+}
+
 .set__legend {
-  font-size: $f-sec-title;
-  line-height: $l-sec-title - 12;
+  padding: 0;
+  font-size: 24px;
+  line-height: 24px;
+  color: $f-opt-color;
+  text-align: left;
+}
+
+.set__input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include reset;
+
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .set__label {
-  font-size: $f-sec;
-  line-height: $l-main;
+  @include reset;
+  margin-right: 16px;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  font-size: 16px;
+  line-height: 18px;
   color: $f-modal-color;
   text-transform: uppercase;
 }
 
 .set__input {
+  flex-grow: 2;
+  box-sizing: border-box;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-left: 15px;
   font-family: inherit;
-  font-size: $f-sec;
-  line-height: $l-main;
+  font-size: 16px;
+  line-height: 18px;
   color: $f-base-color;
   text-transform: uppercase;
+  border: 1px solid rgba(230, 230, 230, 1);
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    border-color: rgba(68, 68, 68, 1);
+  }
+
+  &--error {
+    border-color: rgba(255, 130, 130, 1);
+  }
+}
+
+.set--contacts .set__input-wrapper {
+  position: relative;
+}
+
+.set--contacts .set__input {
+  padding-right: 47px;
+}
+
+.set--contacts .set__input-icon {
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: 1px;
+  width: 47px;
+  height: 43px;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  text-align: center;
+  background-color: $base-color;
+
+  &--phone {
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+}
+
+.set__input:focus + .set__input-icon path {
+  fill: $opt-color-gn;
+}
+
+.set__input--error + .set__input-icon path {
+  fill: rgba(255, 130, 130, 1);
+}
+
+.set--radio .set__label,
+.set--checkbox .set__label {
+  position: relative;
+  padding-left: 46px;
+  cursor: pointer;
+}
+
+.set--radio .set__label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.set--radio .set__input-wrapper {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.set--radio input[type="radio"] + .set__radio-ind {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  background-color: $base-color;
+  border: 1px solid rgba(208, 208, 208, 1);
+  border-radius: 50%;
+}
+
+.set--radio input[type="radio"]:checked + .set__radio-ind::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  background-color: $opt-color-gn;
+  border: 1px solid $opt-color-gn;
+  border-radius: 50%;
+}
+
+.set--radio input[type="radio"]:hover + .set__radio-ind {
+  border-color: rgba(191, 191, 191, 1);
+}
+
+.set--radio input[type="radio"]:focus + .set__radio-ind {
+  outline: 1px auto;
+}
+
+.set--radio input[type="radio"]:active + .set__radio-ind {
+  opacity: 0.3;
+}
+
+.set--checkbox input[type="checkbox"] + .set__checkbox-ind {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  border: 1px solid $border-color;
+}
+
+.set--checkbox input[type="checkbox"]:checked + .set__checkbox-ind {
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 16px;
+}
+
+.set--checkbox input[type="checkbox"]:hover + .set__checkbox-ind {
+  border-color: rgba(186, 186, 186, 1);
+}
+
+.set--checkbox input[type="checkbox"]:focus + .set__checkbox-ind {
+  outline: 1px auto;
+}
+
+.set--checkbox input[type="checkbox"]:active + .set__checkbox-ind {
+  opacity: 0.3;
+}
+
+.set--contacts .set__legend {
+  width: 222px;
+  margin-right: auto;
+  padding-top: 18px;
+  padding-left: 20px;
+}
+
+.set--contacts .set__wrapper {
+  padding: 35px 20px;
+  padding-bottom: 18px;
+}
+
+.set--contacts .set__label {
+  margin-right: 12px;
+}
+
+.set--comment .set__legend {
+  width: 164px;
+  margin-right: auto;
+  padding: 0 20px;
+  padding-bottom: 5px;
+}
+
+.set--comment .set__wrapper {
+  padding: 28px 20px;
+  padding-bottom: 18px;
+}
+
+.set--comment .set__input {
+  width: 280px;
+  height: 150px;
+  resize: none;
+}
+
+.set--checkbox .set__legend {
+  width: 180px;
+  margin-right: auto;
+  padding: 0 20px;
+  padding-bottom: 5px;
+}
+
+.set--checkbox .set__wrapper {
+  padding: 35px 20px;
+  padding-top: 25px;
+  padding-bottom: 18px;
+}
+
+.set--checkbox .set__label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.set--checkbox .set__input-wrapper {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .set {
+    position: relative;
+    width: 710px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    &--main-info {
+      padding-top: 23px;
+      padding-bottom: 72px;
+    }
+
+    &--radio {
+      width: 630px;
+      margin-bottom: 98px;
+      padding: 0 22px;
+      padding-top: 22px;
+      padding-bottom: 24px;
+    }
+
+    &--contacts,
+    &--comment,
+    &--checkbox {
+      width: auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    &--contacts .set__wrapper,
+    &--comment .set__wrapper,
+    &--checkbox .set__wrapper {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  .set--contacts .set__legend,
+  .set--comment .set__legend,
+  .set--checkbox .set__legend {
+    top: -26px;
+    left: 50%;
+    position: absolute;
+    margin-left: -364px;
+    padding: 0 42px;
+    font-size: 36px;
+    line-height: 36px;
+    background-color: $base-color;
+  }
+
+  .set--contacts .set__legend {
+    width: 594px;
+    padding-right: 38px;
+  }
+
+  .set--contacts .set__wrapper {
+    padding-top: 86px;
+    padding-bottom: 88px;
+  }
+
+  .set--contacts .set__input-icon {
+    top: 4px;
+  }
+
+  .set--comment .set__legend {
+    width: 259px;
+  }
+
+  .set--comment .set__wrapper {
+    padding-top: 88px;
+    padding-bottom: 83px;
+  }
+
+  .set--comment .set__input {
+    width: 631px;
+    height: 174px;
+  }
+
+  .set--checkbox .set__legend {
+    width: 292px;
+  }
+
+  .set--checkbox .set__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 68px;
+    padding-bottom: 23px;
+  }
+
+  .set--checkbox .set__label {
+    width: 288px;
+    max-height: 40px;
+    text-align: left;
+  }
+
+  .set--checkbox .set__input-wrapper {
+    margin-bottom: 32px;
+  }
+
+  .set__label {
+    margin-right: 17px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .set__input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .set__input-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .set--radio .set__label,
+  .set--checkbox .set__label {
+    padding-left: 64px;
+  }
+
+  .set--radio .set__label {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .set--radio .set__input-wrapper {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .set--radio input[type="radio"] + .set__radio-ind {
+    left: 4px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
+
+  .set--radio input[type="radio"]:checked + .set__radio-ind::before {
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+  }
+
+  .set--checkbox input[type="checkbox"] + .set__checkbox-ind {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .set {
+    &--main-info {
+      margin: 0;
+      padding: 0;
+      padding-top: 40px;
+    }
+
+    &--radio {
+      margin-top: 40px;
+    }
+  }
+
+  .set--contacts .set__legend,
+  .set--comment .set__legend,
+  .set--checkbox .set__legend {
+    margin-left: -655px;
+  }
+
+  .set--contacts .set__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .set--contacts .set__input-wrapper {
+    width: 572px;
+  }
+
+  .set--contacts .set__input {
+    max-height: 52px;
+  }
+
+  .set--comment .set__input {
+    width: 100%;
+  }
+
+  .set--checkbox .set__label {
+    width: 248px;
+  }
 }
