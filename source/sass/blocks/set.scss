@@ -9,6 +9,10 @@
   }
 }
 
+.set__wrapper {
+  padding: 0;
+}
+
 .set__legend {
   padding: 0;
   font-size: 24px;
@@ -253,7 +257,7 @@
 }
 
 .set--checkbox .set__wrapper {
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 .set--checkbox .set__label {
@@ -262,7 +266,7 @@
 }
 
 .set--checkbox .set__input-wrapper {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
   &:last-child {
     margin-bottom: 0;
@@ -270,16 +274,102 @@
 }
 
 @media (min-width: $tablet-width) {
-//  .set__label {
-//    font-size: 20px;
-//    line-height: 20px;
-//  }
-//
-//  .set__input {
-//    padding-top: 10px;
-//    padding-bottom: 10px;
-//    padding-left: 20px;
-//    font-size: 20px;
-//    line-height: 20px;
-//  }
+  .set {
+    width: 710px;
+    margin: 0 auto; 
+    padding: 0 40px;
+
+    &--main-info {
+      padding-top: 23px;
+      padding-bottom: 72px;
+    }
+
+    &--radio {
+      width: 630px;
+      margin-bottom: 90px;
+      padding: 0 22px;
+      padding-top: 22px;
+      padding-bottom: 24px;
+    }
+
+    &--contacts,
+    &--comment,
+    &--checkbox {
+      width: auto;
+      margin: 0;
+    }
+
+    &--contacts .set__wrapper,
+    &--comment .set__wrapper,
+    &--checkbox .set__wrapper {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  .set__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .set--contacts .set__legend {
+    width: 594px;
+    padding: 0 42px;
+  }
+
+  .set__label {
+    margin-right: 17px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .set__input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .set__input-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .set--radio .set__label,
+  .set--checkbox .set__label {
+    padding-left: 64px;
+  }
+
+  .set--radio .set__label {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .set--radio .set__input-wrapper {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .set--radio input[type="radio"] + .set__radio-ind {
+    left: 4px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
+
+  .set--radio input[type="radio"]:checked + .set__radio-ind::before {
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+  }
+
+  .set--checkbox input[type="checkbox"] + .set__checkbox-ind {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
 }

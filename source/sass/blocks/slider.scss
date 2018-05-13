@@ -93,7 +93,7 @@
 
   .slider__item {
     position: relative;
-    min-height: 364px;
+    min-height: 362px;
   }
 
   .slider__item img {
@@ -138,13 +138,18 @@
     border: none;
     border-bottom: 1px dotted rgba(190, 190, 190, 1);
     cursor: pointer;
+
+    &--before {
+      padding-right: 5px;
+    }
   }
 
   .slider__range-bar {
     position: relative;
     width: 428px;
     height: 6px;
-    margin: 10px 0;
+    margin-top: 8px;
+    margin-bottom: 12px;
     background-color: rgba(220, 220, 220, 1);
     border: 1px solid rgba(220, 220, 220, 1);
     border-radius: 3px;
@@ -184,5 +189,13 @@
   .slider__range-toggle:active {
     border-color: $opt-color-gn;
     box-shadow: 0 2px 4px 2px rgba(190, 190, 190, 1);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__range-toggles {
+    margin: 0;
+    margin-top: 2px;
+    margin-left: 38px;
   }
 }

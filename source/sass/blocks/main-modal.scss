@@ -4,20 +4,21 @@
   background-color: $base-color;
 }
 
-.main-modal__wrapper {
+.main-modal__wrapper,
+.main-modal__info-wrapper {
   padding: 0;
 }
 
 .main-modal__title {
   padding-top: 16px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
   padding-left: 20px;
 }
 
 .main-modal__description {
   @include reset;
-  padding-right: 52px;
   padding-left: 20px;
+  padding-right: 52px;
   color: $f-opt-color;
   text-transform: uppercase;
 }
@@ -27,6 +28,11 @@
     width: auto;
   }
 
+  .main-modal__wrapper {
+    width: auto;
+    margin: 0;
+  }
+
   .main-modal__title {
     padding: 0;
     padding-top: 34px;
@@ -34,7 +40,7 @@
   }
 
   .main-modal__description {
-    margin-top: 56px;
+    margin-top: 55px;
     padding: 0;
     padding-left: 40px;
     padding-right: 290px;

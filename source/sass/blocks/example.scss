@@ -6,11 +6,11 @@
 
 .example__wrapper {
   padding: 0;
-  padding-top: 18px;
+  padding-top: 16px;
 }
 
 .example__title {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   padding-left: 20px;
 }
 
@@ -30,13 +30,13 @@
   justify-content: space-between;
   @include reset-list;
   padding: 14px 20px;
-  padding-bottom: 34px;
+  padding-bottom: 36px;
 }
 
 .example__item {
   position: relative;
   width: 124px;
-  padding: 15px 0;
+  padding: 14px 0;
   text-align: center;
   border: 1px solid rgba(207, 207, 207, 1);
   border-radius: 3px;
@@ -84,10 +84,6 @@
 
   .example__wrapper {
     padding-top: 43px;
-  }
-
-  .example__slider {
-    background-color: $opt-color-gy;
   }
 
   .example__title {
@@ -143,6 +139,7 @@
   .example__cost {
     width: 175px;
     padding: 10px 0;
+    padding-top: 12px;
     font-size: 20px;
     line-height: 20px;
     text-align: right;
@@ -150,6 +147,7 @@
 
   .example__slider {
     margin-top: 215px;
+    background-color: $opt-color-gy;
   }
 }
 
@@ -171,13 +169,13 @@
   .example__wrapper {
     width: 50%;
     margin: 0;
-    padding-top: 65px;
+    padding-top: 70px;
     padding-right: 178px;
   }
 
   .example__title {
     position: absolute;
-    top: -140px;
+    top: -135px;
   }
 
   .example__description {

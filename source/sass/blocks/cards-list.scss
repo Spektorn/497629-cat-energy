@@ -9,7 +9,7 @@
   min-height: 265px;
   margin-bottom: 20px;
   padding: 20px;
-  padding-top: 28px;
+  padding-top: 30px;
   background-color: $opt-color-gy;
 
   &:last-child {
@@ -24,8 +24,8 @@
   }
 
   &::before {
-    top: 20px;
-    left: 18px;
+    top: 22px;
+    left: 19px;
     width: 55px;
     height: 55px;
     background-color: $opt-color-gn;
@@ -39,8 +39,8 @@
   }
 
   &--fit::after {
-    top: 19px;
-    left: 28px;
+    top: 22px;
+    left: 30px;
     width: 35px;
     height: 49px;
     background-image: url(../../img/icon-cat-slim.svg);
@@ -48,8 +48,8 @@
   }
 
   &--mass::after {
-    top: 33px;
-    left: 11px;
+    top: 35px;
+    left: 13px;
     width: 67px;
     height: 28px;
     background-image: url(../../img/icon-cat-pro.svg);
@@ -58,19 +58,19 @@
 }
 
 .cards-list__title {
-  margin-left: 72px;
+  margin-left: 71px;
   text-transform: uppercase;
 }
 
 .cards-list__description {
   @include reset;
-  margin-top: 32px;
-  margin-bottom: 24px;
+  margin-top: 30px;
+  margin-bottom: 22px;
   font-family: "Arial";
 }
 
 .cards-list__link-container {
-  padding-top: 17px;
+  padding-top: 19px;
   border-top: 1px solid rgba(217, 217, 217, 1);
 }
 
@@ -101,7 +101,7 @@
     min-height: 372px;
     margin-bottom: 30px;
     padding-top: 78px;
-    padding-bottom: 56px;
+    padding-bottom: 58px;
     padding-left: 54px;
     padding-right: 280px;
 
@@ -116,9 +116,14 @@
       height: 204px;
     }
 
+    &--mass::before {
+      top: 91px;
+      left: 446px;
+    }
+
     &--fit::after {
       top: 82px;
-      left: 475px;
+      left: 477px;
       width: 140px;
       height: 194px;
       background-size: 140px 194px;
@@ -126,7 +131,7 @@
 
     &--mass::after {
       top: 136px;
-      left: 410px;
+      left: 412px;
       width: 268px;
       height: 112px;
       background-size: 268px 112px;
@@ -140,7 +145,7 @@
 
   .cards-list__description {
     margin-top: 26px;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -158,20 +163,21 @@
 
 @media (min-width: $desktop-width) {
   .cards-list__item {
-    width: 568px;
+    width: 570px;
     margin-bottom: 0;
     padding-bottom: 60px;
+    padding-left: 52px;
     padding-right: 56px;
 
     &::before {
-      top: 48px;
-      left: 50px;
+      top: 46px;
+      left: 48px;
       width: 105px;
       height: 105px;
     }
 
     &--fit::after {
-      top: 43px;
+      top: 41px;
       left: 65px;
       width: 70px;
       height: 97px;
@@ -179,7 +185,7 @@
     }
 
     &--mass::after {
-      top: 72px;
+      top: 69px;
       left: 33px;
       width: 134px;
       height: 56px;
@@ -192,7 +198,7 @@
   }
 
   .cards-list__description {
-    margin-top: 75px;
+    margin-top: 73px;
     margin-bottom: 34px;
   }
 }
