@@ -1,6 +1,6 @@
 .main-map {
   background-color: $opt-color-gy;
-  
+
   &--index {
     background-color: $base-color;
   }
@@ -49,7 +49,7 @@
     @include reset;
     width: 100%;
     height: 398px;
-  } 
+  }
 
   .main-map__invite,
   .main-map__address {
@@ -101,5 +101,5 @@
 
   .main-map__frame {
     height: 402px;
-  } 
+  }
 }
