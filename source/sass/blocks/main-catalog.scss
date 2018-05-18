@@ -28,3 +28,9 @@
     font-size: 60px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-catalog__wrapper {
+    padding-top: 18px;
+  }
+}

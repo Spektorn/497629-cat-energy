@@ -7,7 +7,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 42px;
+    top: 40px;
     right: 0;
     display: block;
     width: 53px;
@@ -17,31 +17,32 @@
 }
 
 .extras__title {
-  padding-top: 28px;
-  padding-bottom: 32px;
+  padding-top: 26px;
+  padding-bottom: 34px;
   font-size: 24px;
   line-height: 24px;
 }
 
 .extras__special-offer {
-  margin-top: 35px;
-  margin-bottom: 39px;
+  margin-top: 40px;
+  margin-bottom: 36px;
 }
 
 @media (min-width: $tablet-width) {
   .extras {
+    position: relative;
     width: auto;
+    padding-top: 91px;
+    border-top: 3px solid $opt-color-gn;
 
     &::before {
-      top: 20px;
-      right: 0;
-      width: 100%;
-      height: 3px;
+      display: none;
     }
   }
 
   .extras__title {
-    position: relative;
+    position: absolute;
+    top: -25px;
     width: 415px;
     padding-top: 0;
     padding-bottom: 80px;
@@ -58,6 +59,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .extras__title {
+    margin-left: -40px;
+    padding-bottom: 79px;
+  }
+
   .extras__extras-list {
     margin-bottom: 85px;
   }
