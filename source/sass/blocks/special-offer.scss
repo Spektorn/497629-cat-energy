@@ -25,12 +25,10 @@
   }
 }
 
-@media
-  (min-resolution: 144dpi),
-  (min-resolution: 1.5dppx) {
-    .special-offer {
-      background-image: url("../../img/gift-photo-mobile@2x.jpg");
-    }
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .special-offer {
+    background-image: url("../../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .special-offer__description {
@@ -58,13 +56,11 @@
     }
   }
 
-  @media
-    (min-resolution: 144dpi),
-    (min-resolution: 1.5dppx) {
-      .special-offer {
-        background-image: url("../../img/gift-photo-tablet@2x.jpg");
-      }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .special-offer {
+      background-image: url("../../img/gift-photo-tablet@2x.jpg");
     }
+  }
 
   .special-offer__description {
     padding: 70px 0;
@@ -81,13 +77,11 @@
     background-size: 245px 289px;
   }
 
-  @media
-    (min-resolution: 144dpi),
-    (min-resolution: 1.5dppx) {
-      .special-offer {
-        background-image: url("../../img/gift-photo-desktop@2x.jpg");
-      }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .special-offer {
+      background-image: url("../../img/gift-photo-desktop@2x.jpg");
     }
+  }
 
   .special-offer__description {
     padding-left: 40px;
