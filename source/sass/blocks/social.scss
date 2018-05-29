@@ -37,13 +37,15 @@
 }
 
 .social__link {
-  &:hover .st0-soc-icon,
-  &:focus .st0-soc-icon {
-    fill: $opt-color-gn;
+  color: #666666;
+
+  &:hover,
+  &:focus {
+    color: $opt-color-gn;
   }
 
-  &:active .st0-soc-icon {
-    fill: transparentize($opt-color-gn, 0.7);
+  &:active {
+    color: transparentize($opt-color-gn, 0.7);
   }
 }
 

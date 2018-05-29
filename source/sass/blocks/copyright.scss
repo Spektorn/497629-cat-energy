@@ -8,18 +8,22 @@
   line-height: 16px;
   color: $f-base-color;
 
-  &:hover path,
-  &:focus path {
-    fill: $opt-color-gn;
+  &:hover .copyright__html-logo,
+  &:focus .copyright__html-logo {
+    color: $opt-color-gn;
   }
 
-  &:active path {
-    fill: transparentize($opt-color-gn, 0.7);
+  &:active .copyright__html-logo {
+    color: transparentize($opt-color-gn, 0.7);
   }
 
   &:active {
     color: transparentize($f-base-color, 0.7);
   }
+}
+
+.copyright__html-logo {
+  color: #666666;
 }
 
 .copyright__html-name {
