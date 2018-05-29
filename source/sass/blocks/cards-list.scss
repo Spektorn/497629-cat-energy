@@ -43,7 +43,7 @@
     left: 30px;
     width: 35px;
     height: 49px;
-    background-image: url("../../img/cat-slim.svg");
+    background-image: url("../img/cat-slim.svg");
     background-size: 35px 49px;
   }
 
@@ -52,7 +52,7 @@
     left: 13px;
     width: 67px;
     height: 28px;
-    background-image: url("../../img/cat-pro.svg");
+    background-image: url("../img/cat-pro.svg");
     background-size: 67px 28px;
   }
 }
@@ -83,7 +83,7 @@
   &:hover .cards-list__link-icon-container,
   &:focus .cards-list__link-icon-container {
     width: 32px;
-    background-image: url("../../img/right-arrow-verylong.svg");
+    background-image: url("../img/right-arrow-verylong.svg");
   }
 
   &:active {
@@ -96,7 +96,7 @@
   width: 25px;
   height: 11px;
   margin-left: 8px;
-  background-image: url("../../img/right-arrow-long.svg");
+  background-image: url("../img/right-arrow-long.svg");
   background-repeat: no-repeat;
 }
 
