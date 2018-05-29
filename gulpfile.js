@@ -14,9 +14,10 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var clean = require("del")
 var server = require("browser-sync").create();
+var run = require("run-sequence");
 
 gulp.task("html", function() {
-  gulp.src("source/*.html")
+  return gulp.src("source/*.html")
     .pipe(posthtml([
       include()
     ]))
@@ -88,9 +89,9 @@ gulp.task("build", function(done) {
   );
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -98,5 +99,5 @@ gulp.task("serve", ["style"], function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
 });
