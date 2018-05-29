@@ -83,7 +83,7 @@ gulp.task("build", function(done) {
     "clean",
     "copy",
     "style",
-    "sprite", 
+    "sprite",
     "html",
     done
   );
